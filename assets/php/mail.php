@@ -19,8 +19,8 @@ if (isset($_POST["send"])) {
     $mail->isSMTP();                              //Send using SMTP
     $mail->Host       = 'smtp.gmail.com';       //Set the SMTP server to send through
     $mail->SMTPAuth   = true;             //Enable SMTP authentication
-    $mail->Username   = 'your email address';   //SMTP write your email
-    $mail->Password   = 'app password';      //SMTP password
+    $mail->Username   = 'dyguipro@gmail.com';   //SMTP write your email
+    $mail->Password   = 'xyvxwepaeegtcdus';      //SMTP password
     $mail->SMTPSecure = 'ssl';            //Enable implicit SSL encryption
     $mail->Port       = 465;                                    
  
