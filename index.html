@@ -627,57 +627,26 @@
             </div>
             <div class="col-md-5">
               <div class="contact-form-area-wrapper">
-                <form
-                  id="digita-contact-form"
-                  action="./assets/php/contact-mail.php"
-                  method="POST">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="Name"
-                      name="name"
-                      placeholder="Votre Nom"/>
-                  </div>
-                  <div class="form-group">
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="Email"
-                      name="email"
-                      placeholder="Adresse mail"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="Budget"
-                      name="Budget"
-                      placeholder="Votre Budget (Optionnel)"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <input type="textarea"
-                      id="Message"
-                      class="form-control"
-                      rows="3"
-                      name="message"
-                      placeholder="Description de votre projet"
-                    ></textarea>
-                  </div>
-                  <input type="submit" class="comman-btn about-me-btn">
-                    
-                    <img
-                      src="assets/img/brand-icons/hover-icon.png"
-                      alt="place img"
-                      class=""
-                    />
-                  <p class="contact-send-message"></p>
-                </form>
+                 <form id="digita-contact-form" action="./assets/php/contact-mail.php" method="POST">
+                    <div class="form-group">
+                       <input type="text" class="form-control" id="Name" name="name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                       <input type="email" class="form-control" id="Email" name="email" placeholder="Email Address">
+                    </div>
+                    <div class="form-group">
+                       <input type="text" class="form-control" id="Budget" name="Budget" placeholder="Your Budget (Optional)">
+                    </div>
+                    <div class="form-group">
+                       <textarea id="Message" class="form-control" rows="3" name="message" placeholder="Project Description"></textarea>
+                    </div>
+                    <button type="submit" class="comman-btn about-me-btn">HIRE ME
+                       <img src="assets/img/brand-icons/hover-icon.png" alt="place img" class="">
+                    </button>
+                    <p class="contact-send-message"></p>
+                 </form>
               </div>
-            </div>
-          </div>
+           </div>
         </div>
       </section>
       <!-- end contact section. -->
