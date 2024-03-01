@@ -1,34 +1,29 @@
 <?php
+// Vérifier si le formulaire a été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = htmlspecialchars($_POST['name']);
-    $email = htmlspecialchars($_POST['email']);
-    $website = htmlspecialchars($_POST['website']);
-    $message = htmlspecialchars($_POST['message']);
+    // Récupérer les valeurs du formulaire
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $budget = $_POST['Budget'];
+    $message = $_POST['message'];
 
-    // Sender Email and Name
-    $from = "$name <$email>";
+    // Destinataire de l'email (votre adresse email)
+    $to = "dyguipro@gmail.com";
 
-    // Recipient Email Address
-    $to = 'matabsaifeddine@gmail.com';
+    // Sujet de l'email
+    $subject = "Nouveau message de $name";
 
-    // Email Subject
-    $subject = 'Flake Contact';
+    // Contenu de l'email
+    $email_body = "Vous avez reçu un nouveau message de la part de $name.\n\n";
+    $email_body .= "Email: $email\n";
+    $email_body .= "Budget: $budget\n";
+    $email_body .= "Message:\n$message";
 
-    // Email Header
-    $headers = "From: $from\r\n" .
-               "MIME-Version: 1.0\r\n";
+    // En-têtes de l'email
+    $headers = "De : $name <$email>\r\nReply-To: $email\r\n";
 
-    // Message Body
-    $body = "Name: $name\nEmail: $email\nWebsite: $website\nMessage:\n$message";
-
-    // Check that data was sent to the mailer.
-    if (empty($name) || empty($message) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo 'Please fill all the fields and try again.';
-        exit;
-    }
-
-    // If there are no errors, send the email
-    if (mail($to, $subject, $body, $headers)) {
+    // Envoyer l'email
+    if (mail($to, $subject, $email_body, $headers)) {
         echo 'Thank You! We will be in touch with you very soon.';
     } else {
         echo 'Sorry there was an error sending your message. Please try again';
