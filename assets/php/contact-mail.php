@@ -1,45 +1,37 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-require 'path/to/PHPMailer/src/Exception.php';
-require 'path/to/PHPMailer/src/PHPMailer.php';
-require 'path/to/PHPMailer/src/SMTP.php';
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $website = $_POST['website'];
-    $message = $_POST['message'];
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $website = htmlspecialchars($_POST['website']);
+    $message = htmlspecialchars($_POST['message']);
 
-    // Include PHPMailer library files
+    // Sender Email and Name
+    $from = "$name <$email>";
 
-    $mail = new PHPMailer(true);
+    // Recipient Email Address
+    $to = 'matabsaifeddine@gmail.com';
 
-    try {
-        //Server settings
-        $mail->SMTPDebug = 0;                      // Enable verbose debug output
-        $mail->isSMTP();                                            // Send using SMTP
-        $mail->Host       = 'smtp.gmail.com';                     // Set the SMTP server to send through
-        $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-        $mail->Username   = 'dyguipro@gmail.com';                     // SMTP username
-        $mail->Password   = 'xyvxwepaeegtcdus';                               // SMTP password
-        $mail->SMTPSecure = 'tls';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
-        $mail->Port       = 465;                                    // TCP port to connect to
+    // Email Subject
+    $subject = 'Flake Contact';
 
-        //Recipients
-        $mail->setFrom($email, $name);
-        $mail->addAddress('dyguipro@gmail.com');     // Add a recipient
+    // Email Header
+    $headers = "From: $from\r\n" .
+               "MIME-Version: 1.0\r\n";
 
-        // Content
-        $mail->isHTML(false);                                  // Set email format to HTML
-        $mail->Subject = 'Flake Contact';
-        $mail->Body    = "Name: $name\nEmail: $email\nWebsite: $website\nMessage:\n$message";
+    // Message Body
+    $body = "Name: $name\nEmail: $email\nWebsite: $website\nMessage:\n$message";
 
-        $mail->send();
-        echo 'Merci! On vous recontactera bientôt.';
-    } catch (Exception $e) {
-        echo "Désolé il y a une erreur lors de l'envoie de votre message. Merci de réessayer. Erreur: {$mail->ErrorInfo}";
+    // Check that data was sent to the mailer.
+    if (empty($name) || empty($message) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo 'Please fill all the fields and try again.';
+        exit;
+    }
+
+    // If there are no errors, send the email
+    if (mail($to, $subject, $body, $headers)) {
+        echo 'Thank You! We will be in touch with you very soon.';
+    } else {
+        echo 'Sorry there was an error sending your message. Please try again';
     }
 }
 ?>
