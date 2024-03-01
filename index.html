@@ -629,7 +629,7 @@
               <div class="contact-form-area-wrapper">
                 <form
                   id="digita-contact-form"
-                  action="php/mail.php"
+                  action="./assets/php/mail.php"
                   method="POST">
                   <div class="form-group">
                     <input
@@ -658,7 +658,7 @@
                     />
                   </div>
                   <div class="form-group">
-                    <textarea
+                    <input type="textarea"
                       id="Message"
                       class="form-control"
                       rows="3"
@@ -666,14 +666,13 @@
                       placeholder="Description de votre projet"
                     ></textarea>
                   </div>
-                  <button type="submit" class="comman-btn about-me-btn">
-                    Récrutez moi
+                  <input type="submit" class="comman-btn about-me-btn">
+                    
                     <img
                       src="assets/img/brand-icons/hover-icon.png"
                       alt="place img"
                       class=""
                     />
-                  </button>
                   <p class="contact-send-message"></p>
                 </form>
               </div>
