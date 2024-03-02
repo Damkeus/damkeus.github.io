@@ -211,9 +211,33 @@
 			});
 		}, 0);
 	});
-	// preloader
-	$(window).on('load', function () {
-		$('.preloder').fadeOut(3000);
-		$('.preloader-wrapper').delay(2500).fadeOut('slow');
-	});
-}(jQuery));
+	// Utilisation de jQuery pour attendre que la page soit entièrement chargée
+$(window).on('load', function () {
+    // Code pour masquer le preloader une fois que la page est chargée
+    $('.preloder').fadeOut(3000);
+    $('.preloader-wrapper').delay(2500).fadeOut('slow');
+});
+
+// Fonction pour gérer le changement de langue
+function switchLanguage(lang) {
+    // Supprimer la classe active de tous les liens
+    var langLinks = document.querySelectorAll('.list-inline li a');
+    langLinks.forEach(function(link) {
+        link.classList.remove('active');
+    });
+
+    // Ajouter la classe active au lien sélectionné
+    event.target.classList.add('active');
+
+    // Traduire la page dans la langue sélectionnée
+    if (lang === 'en') {
+        googleTranslateElementInit('en'); // Appeler la fonction de traduction avec la langue sélectionnée
+    } else if (lang === 'es') {
+        googleTranslateElementInit('es');
+    } else if (lang === 'fr') {
+        googleTranslateElementInit('fr');
+    }
+
+    // Empêcher le comportement par défaut du lien
+    event.preventDefault();
+};
