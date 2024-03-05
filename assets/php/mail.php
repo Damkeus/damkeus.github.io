@@ -1,44 +1,43 @@
 <?php
+// Vérification de la soumission du formulaire
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  // Récupération des données du formulaire
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $message = $_POST['message'];
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+  // Vérification de la validité des données
+  $errors = [];
+  if (empty($name)) {
+    $errors[] = "Le nom est obligatoire.";
+  }
+  if (empty($email)) {
+    $errors[] = "L'email est obligatoire.";
+  } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $errors[] = "L'email n'est pas valide.";
+  }
+  if (empty($message)) {
+    $errors[] = "Le message est obligatoire.";
+  }
 
-require 'phpmailer/src/Exception.php';
-require 'phpmailer/src/PHPMailer.php';
-require 'phpmailer/src/SMTP.php';
-echo $_POST;
-if (isset($_POST["email"])) {
-    $mail = new PHPMailer(true);
+  // Si il n'y a pas d'erreurs, envoi du message
+  if (empty($errors)) {
+    // Envoi du message
+    // (exemple d'envoi avec PHP mail())
+    $to = "evan9105.e@gmail.com";
+    $subject = "Nouveau message de $name";
+    $headers = "From: $email\r\n";
+    $headers .= "Reply-To: $email\r\n";
+    mail($to, $subject, $message, $headers);
 
-    try {
-        //Server settings
-        $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com';
-        $mail->SMTPAuth   = true;
-        $mail->Username   = 'dyguipro@gmail.com'; // Your Gmail email address
-        $mail->Password   = 'xyvxwepaeegtcdus'; // Your Gmail password or App Password
-        $mail->SMTPSecure = 'tls'; // Enable TLS encryption
-        $mail->Port       = 587; // TCP port to connect to
-
-        //Recipients
-        $mail->setFrom($_POST["email"], $_POST["name"]);
-        $mail->addAddress('recipient@example.com');
-        $mail->addReplyTo($_POST["email"], $_POST["name"]);
-
-        //Content
-        $mail->isHTML(true);
-        $mail->Subject = $_POST["subject"];
-        $mail->Body    = $_POST["message"];
-
-        $mail->send();
-        echo "
-            <script> 
-                alert('Message was sent successfully!');
-                document.location.href = 'index.php';
-            </script>
-        ";
-    } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    // Affichage d'un message de confirmation
+    echo "Votre message a été envoyé avec succès.";
+  } else {
+    // Affichage des erreurs
+    echo "Le formulaire contient des erreurs :<br>";
+    foreach ($errors as $error) {
+      echo "- $error<br>";
     }
+  }
 }
 ?>
