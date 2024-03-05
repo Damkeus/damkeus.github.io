@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if (empty($errors)) {
     // Envoi du message
     // (exemple d'envoi avec PHP mail())
-    $to = "evan9105.e@gmail.com";
+    $to = "dyguipro@gmail.com";
     $subject = "Nouveau message de $name";
     $headers = "From: $email\r\n";
     $headers .= "Reply-To: $email\r\n";
