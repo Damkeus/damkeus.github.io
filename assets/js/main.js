@@ -216,4 +216,33 @@
 		$('.preloder').fadeOut(3000);
 		$('.preloader-wrapper').delay(2500).fadeOut('slow');
 	});
-}(jQuery));
+}(jQuery))
+function submitForm() {
+    var formData = {
+        name: document.getElementById("Name").value,
+        email: document.getElementById("Email").value,
+        budget: document.getElementById("Budget").value,
+        message: document.getElementById("Message").value
+    };
+
+    fetch('https://formspree.io/dyguipro@gmail.com', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            document.querySelector(".contact-send-message").textContent = "Votre message a été envoyé avec succès.";
+        } else {
+            document.querySelector(".contact-send-message").textContent = "Une erreur s'est produite lors de l'envoi du message.";
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        document.querySelector(".contact-send-message").textContent = "Une erreur s'est produite lors de l'envoi du message.";
+    });
+}
+;
