@@ -245,4 +245,259 @@ function submitForm() {
         document.querySelector(".contact-send-message").textContent = "Une erreur s'est produite lors de l'envoi du message.";
     });
 }
+function switchLanguage(lang) {
+    // Définir les traductions
+    var translations = {
+        'en': {
+            'intro': 'Here <span>Prochette Dylan,</span> Computer Science student, aspiring Machine Learning engineer and web developer based in France. I am seeking professional opportunities internationally.',
+            'menu_home': 'Home',
+            'menu_about': 'About',
+            'menu_services': 'Services',
+            'menu_resume': 'Resume',
+            'menu_blog': 'Blog',
+            'menu_contact': 'Contact',
+            'about_title': 'About',
+            'about_description': 'Hi! My name is Prochette Dylan. I am 19 years old and studying in Paris. My world revolves around the exciting domains of finance, data, and Python. I am constantly in search of exploration and learning in these fields. I aim to develop all my computer skills. Feel free to contact me for any advice; they are all welcome.',
+            'about_recruit': 'Hire Me',
+            'about_cv': 'Resume',
+            'skills_heading': 'Skills',
+            'skill_python': "Python Programming",
+            'skill_web_dev': 'Web Development',
+            'skill_sql': 'SQL Database Management',
+            'skill_data_analysis': 'Data Analysis',
+            'expertise_title': 'Areas of Expertise',
+			'expertise_txt': "Maîtrisant différentes techniques de Machine learning et la science des données, j'aspire t à appliquer des solutions et des innovations basées sur les données aux défis du monde réel. ",
+            'expertise_ml': 'Machine Learning',
+            'expertise_web_dev': 'Web Development',
+            'expertise_sql': 'SQL Database Management',
+            'expertise_data_analysis': 'Data Analysis',
+            'summary_title': 'Resume',
+            'education_title': 'Education:',
+            'education_date1': 'March 2023 - Present',
+            'education_institution1': 'Datacamp',
+            'education_description1': 'Currently enrolled in several data analysis and programming courses to improve my skills and knowledge in data analysis and technologies.',
+            'education_date2': 'September 2023 - Present',
+            'education_institution2': 'Bachelor Degree',
+            'education_description2': 'I am currently in Bachelor Tech&Business in Paris. We learn all the concrete and theoretical aspects of visualizing and exploring the world of Data.',
+            'education_date3': '2019-2021',
+            'education_institution3': 'Notre Dame de la Compassion High School',
+            'education_description3': 'I obtained my Baccalauréat with a major in computer science and economics with honors.',
+            'experience_title': 'Experiences:',
+            'experience_date1': 'September 2023',
+            'experience_company1': 'Night ON',
+            'experience_position1': 'Software Developer',
+            'experience_description1': 'Developing a WebApp using React.js, FastAPI, Python, and MySQL.',
+            'experience_date2': 'Soon',
+            'experience_company2': 'Soon',
+            'experience_position2': 'Soon',
+            'experience_description2': '...',
+            'experience_date3': 'Soon',
+            'experience_company3': 'Soon',
+            'experience_position3': 'Soon',
+            'experience_description3': '...',
+            'faq_title': 'Got a project in mind?',
+            'faq_description': 'YOU ARE ONLY ONE CLICK AWAY FROM MAKING IT HAPPEN',
+            'faq_button': 'Work Together',
+            'blog_title': 'How did I conceptualize my website?',
+            'blog_description': 'Tools: GithubPages, DNS, and Vscode...',
+            'blog_post1_title': 'Is Vscode the best text editor in the world?',
+            'blog_post1_button': 'Learn More',
+            'blog_post2_title': 'Github Pages: a free hosting method.',
+            'blog_post2_button': 'Learn More',
+            'blog_post3_title': 'A Domain Name?',
+            'blog_post3_button': 'Learn More',
+            'contact_info': 'Let\'s create something new, different, and more meaningful, or make things more visual or conceptual? Let\'s get it!',
+            'contact_button': 'HIRE ME',
+            'footer_text': 'Dylan Prochette © Portfolio'
+        },
+        'es': {
+            'intro': 'Aquí <span>Prochette Dylan,</span> Estudiante de informática, aspirante a ingeniero de Machine Learning y desarrollador web con base en Francia. Estoy buscando oportunidades profesionales a nivel internacional.',
+            'menu_home': 'Inicio',
+            'menu_about': 'Sobre',
+            'menu_services': 'Servicios',
+            'menu_resume': 'Currículum',
+            'menu_blog': 'Blog',
+            'menu_contact': 'Contacto',
+            'about_title': 'Sobre mí',
+            'about_description': '¡Hola! Mi nombre es Prochette Dylan. Tengo 19 años y estudio en París. Mi mundo gira en torno a los emocionantes dominios de las finanzas, los datos y Python. Estoy constantemente en busca de exploración y aprendizaje en estos campos. Mi objetivo es desarrollar todas mis habilidades informáticas. No dudes en contactarme para cualquier consejo; todos son bienvenidos.',
+            'about_recruit': 'Contrátame',
+            'about_cv': 'CV',
+            'skills_heading': 'Habilidades',
+            'skill_python': 'Programación en Python',
+            'skill_web_dev': 'Desarrollo web',
+            'skill_sql': 'Gestión de bases de datos SQL',
+            'skill_data_analysis': 'Análisis de datos',
+            'expertise_title': 'Áreas de experiencia',
+			'expertise-txt':"Domino diversas técnicas de Machine Learning y ciencia de datos, aspiro a aplicar soluciones e innovaciones basadas en datos a los desafíos del mundo real.",
+            'expertise_ml': 'Aprendizaje automático',
+            'expertise_web_dev': 'Desarrollo web',
+            'expertise_sql': 'Gestión de bases de datos SQL',
+            'expertise_data_analysis': 'Análisis de datos',
+            'summary_title': 'Currículum',
+            'education_title': 'Educación:',
+            'education_date1': 'Marzo de 2023 - Presente',
+            'education_institution1': 'Datacamp',
+            'education_description1': 'Actualmente matriculado en varios cursos de análisis de datos y programación para mejorar mis habilidades y conocimientos en análisis de datos y tecnologías.',
+            'education_date2': 'Septiembre de 2023 - Presente',
+            'education_institution2': 'Licenciatura',
+            'education_description2': 'Actualmente estoy en la Licenciatura Tech&Business en París. Aprendemos todos los aspectos concretos y teóricos de visualizar y explorar el mundo de los Datos.',
+            'education_date3': '2019-2021',
+            'education_institution3': 'Escuela secundaria Notre Dame de la Compasión',
+            'education_description3': 'Obtuve mi Baccalauréat con especialización en informática y economía con honores.',
+            'experience_title': 'Experiencias:',
+            'experience_date1': 'Septiembre de 2023',
+            'experience_company1': 'Night ON',
+            'experience_position1': 'Desarrollador de software',
+            'experience_description1': 'Desarrollando una WebApp usando React.js, FastAPI, Python y MySQL.',
+            'experience_date2': 'Próximamente',
+            'experience_company2': 'Próximamente',
+            'experience_position2': 'Próximamente',
+            'experience_description2': '...',
+            'experience_date3': 'Próximamente',
+            'experience_company3': 'Próximamente',
+            'experience_position3': 'Próximamente',
+            'experience_description3': '...',
+            'faq_title': '¿Tienes un proyecto en mente?',
+            'faq_description': 'ESTÁS A SOLO UN CLIC DE HACERLO REALIDAD',
+            'faq_button': 'Trabajemos juntos',
+            'blog_title': '¿Cómo conceptualicé mi sitio web?',
+            'blog_description': 'Herramientas: GithubPages, DNS y Vscode...',
+            'blog_post1_title': '¿Es Vscode el mejor editor de texto del mundo?',
+            'blog_post1_button': 'Aprende más',
+            'blog_post2_title': 'Github Pages: un método de alojamiento gratuito.',
+            'blog_post2_button': 'Aprende más',
+            'blog_post3_title': '¿Un nombre de dominio?',
+            'blog_post3_button': 'Aprende más',
+            'contact_info': 'Creemos algo nuevo, diferente y más significativo, o hagamos las cosas más visuales o conceptuales. ¡Vamos a por ello!',
+            'contact_button': 'CONTRÁTAME',
+            'footer_text': 'Dylan Prochette © Portafolio'
+        },
+        'fr': {
+            'intro': 'Ici <span>Prochette Dylan,</span> Étudiant en informatique, aspirant ingénieur en Machine Learning et développeur web basé en France. Je suis à la recherche d\'opportunités professionnelles à l\'international.',
+            'menu_home': 'Accueil',
+            'menu_about': 'À propos',
+            'menu_services': 'Services',
+            'menu_resume': 'CV',
+            'menu_blog': 'Blog',
+            'menu_contact': 'Contact',
+            'about_title': 'À propos',
+            'about_description': 'Salut ! Je m\'appelle Prochette Dylan. J\'ai 19 ans et j\'étudie à Paris. Mon monde tourne autour des domaines passionnants de la finance, des données et de Python. Je suis constamment à la recherche d\'exploration et d\'apprentissage dans ces domaines. Mon objectif est de développer toutes mes compétences en informatique. N\'hésitez pas à me contacter pour tout conseil ; ils sont tous les bienvenus.',
+            'about_recruit': 'Recrutez-moi',
+            'about_cv': 'CV',
+            'skills_heading': 'Compétences',
+            'skill_python': 'Programmation Python',
+            'skill_web_dev': 'Développement web',
+            'skill_sql': 'Gestion de base de données SQL',
+            'skill_data_analysis': 'Analyse de données',
+            'expertise_title': 'Domaines d\'expertise',
+			'expertise_txt':"Maîtrisant différentes techniques de Machine learning et la science des données, j'aspire t à appliquer des solutions et des innovations basées sur les données aux défis du monde réel.",
+            'expertise_ml': 'Apprentissage automatique',
+            'expertise_web_dev': 'Développement web',
+            'expertise_sql': 'Gestion de base de données SQL',
+            'expertise_data_analysis': 'Analyse de données',
+            'summary_title': 'CV',
+            'education_title': 'Éducation :',
+            'education_date1': 'Mars 2023 - Présent',
+            'education_institution1': 'Datacamp',
+            'education_description1': 'Actuellement inscrit à plusieurs cours d\'analyse de données et de programmation pour améliorer mes compétences et mes connaissances en analyse de données et technologies.',
+            'education_date2': 'Septembre 2023 - Présent',
+            'education_institution2': 'Licence',
+            'education_description2': 'Je suis actuellement en Licence Tech&Business à Paris. Nous apprenons tous les aspects concrets et théoriques de la visualisation et de l\'exploration du monde des données.',
+            'education_date3': '2019-2021',
+            'education_institution3': 'Lycée Notre Dame de la Compassion',
+            'education_description3': 'J\'ai obtenu mon Baccalauréat avec une spécialisation en informatique et économie avec mention.',
+            'experience_title': 'Expériences :',
+            'experience_date1': 'Septembre 2023',
+            'experience_company1': 'Night ON',
+            'experience_position1': 'Développeur logiciel',
+            'experience_description1': 'Développement d\'une WebApp en utilisant React.js, FastAPI, Python et MySQL.',
+            'experience_date2': 'Bientôt',
+            'experience_company2': 'Bientôt',
+            'experience_position2': 'Bientôt',
+            'experience_description2': '...',
+            'experience_date3': 'Bientôt',
+            'experience_company3': 'Bientôt',
+            'experience_position3': 'Bientôt',
+            'experience_description3': '...',
+            'faq_title': 'Vous avez un projet en tête ?',
+            'faq_description': 'VOUS ÊTES À UN SEUL CLIC DE LE RÉALISER',
+            'faq_button': 'Travaillons ensemble',
+            'blog_title': 'Comment ai-je conceptualisé mon site web ?',
+            'blog_description': 'Outils : GithubPages, DNS et Vscode...',
+            'blog_post1_title': 'Vscode est-il le meilleur éditeur de texte au monde ?',
+            'blog_post1_button': 'En savoir plus',
+            'blog_post2_title': 'Github Pages : une méthode d\'hébergement gratuite.',
+            'blog_post2_button': 'En savoir plus',
+            'blog_post3_title': 'Un nom de domaine ?',
+            'blog_post3_button': 'En savoir plus',
+            'contact_info': 'Créons quelque chose de nouveau, différent et plus significatif, ou rendons les choses plus visuelles ou conceptuelles ? Allons-y !',
+            'contact_button': 'EMBAUCHEZ-MOI',
+            'footer_text': 'Dylan Prochette © Portfolio'
+        }
+    };
+
+    // Modifier le contenu en fonction de la langue sélectionnée
+    var langData = translations[lang];
+    $(".language").html(langData['intro']);
+    $("#menu_home").text(langData['menu_home']);
+    $("#menu_about").text(langData['menu_about']);
+    $("#menu_services").text(langData['menu_services']);
+    $("#menu_resume").text(langData['menu_resume']);
+    $("#menu_blog").text(langData['menu_blog']);
+    $("#menu_contact").text(langData['menu_contact']);
+    $("#about_title").text(langData['about_title']);
+    $("#about_description").text(langData['about_description']);
+    $("#about_recruit").text(langData['about_recruit']);
+    $("#about_cv").text(langData['about_cv']);
+    $("#skills_heading").text(langData['skills_heading']);
+    $("#skill_python").text(langData['skill_python']);
+    $("#skill_web_dev").text(langData['skill_web_dev']);
+    $("#skill_sql").text(langData['skill_sql']);
+    $("#skill_data_analysis").text(langData['skill_data_analysis']);
+    $("#expertise_title").text(langData['expertise_title']);
+	$("#expertise_txt").html(langData['expertise_txt']);
+    $("#expertise_ml").text(langData['expertise_ml']);
+    $("#expertise_web_dev").text(langData['expertise_web_dev']);
+    $("#expertise_sql").text(langData['expertise_sql']);
+    $("#expertise_data_analysis").text(langData['expertise_data_analysis']);
+    $("#summary_title").text(langData['summary_title']);
+    $("#education_title").text(langData['education_title']);
+    $("#education_date1").text(langData['education_date1']);
+    $("#education_institution1").text(langData['education_institution1']);
+    $("#education_description1").text(langData['education_description1']);
+    $("#education_date2").text(langData['education_date2']);
+    $("#education_institution2").text(langData['education_institution2']);
+    $("#education_description2").text(langData['education_description2']);
+    $("#education_date3").text(langData['education_date3']);
+    $("#education_institution3").text(langData['education_institution3']);
+    $("#education_description3").text(langData['education_description3']);
+    $("#experience_title").text(langData['experience_title']);
+    $("#experience_date1").text(langData['experience_date1']);
+    $("#experience_company1").text(langData['experience_company1']);
+    $("#experience_position1").text(langData['experience_position1']);
+    $("#experience_description1").text(langData['experience_description1']);
+    $("#experience_date2").text(langData['experience_date2']);
+    $("#experience_company2").text(langData['experience_company2']);
+    $("#experience_position2").text(langData['experience_position2']);
+    $("#experience_description2").text(langData['experience_description2']);
+    $("#experience_date3").text(langData['experience_date3']);
+    $("#experience_company3").text(langData['experience_company3']);
+    $("#experience_position3").text(langData['experience_position3']);
+    $("#experience_description3").text(langData['experience_description3']);
+    $("#faq_title").text(langData['faq_title']);
+    $("#faq_description").text(langData['faq_description']);
+    $("#faq_button").text(langData['faq_button']);
+    $("#blog_title").text(langData['blog_title']);
+    $("#blog_description").text(langData['blog_description']);
+    $("#blog_post1_title").text(langData['blog_post1_title']);
+    $("#blog_post1_button").text(langData['blog_post1_button']);
+    $("#blog_post2_title").text(langData['blog_post2_title']);
+    $("#blog_post2_button").text(langData['blog_post2_button']);
+    $("#blog_post3_title").text(langData['blog_post3_title']);
+    $("#blog_post3_button").text(langData['blog_post3_button']);
+    $("#contact_info").text(langData['contact_info']);
+    $("#contact_button").text(langData['contact_button']);
+    $("#footer_text").text(langData['footer_text']);
+}
+
 ;
