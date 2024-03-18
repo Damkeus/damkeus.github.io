@@ -79,17 +79,17 @@
           <!-- start mainmenu. -->
           <div class="col-md-8 col-sm-8 text-center">
             <div class="mainmenu">
-              <ul id="nav" class="list-inline">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#service">services</a></li>
-
-                <li><a href="#resume">résumer</a></li>
-                <li><a href="#blog">blog</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-              </ul>
+                <ul id="nav" class="list-inline">
+                    <li><a href="#home" id="menu_home">Home</a></li>
+                    <li><a href="#about" id="menu_about">About</a></li>
+                    <li><a href="#service" id="menu_services">Services</a></li>
+                    <li><a href="#resume" id="menu_resume">Résumé</a></li>
+                    <li><a href="#blog" id="menu_blog">Blog</a></li>
+                    <li><a href="#contact" id="menu_contact">CONTACT</a></li>
+                </ul>
             </div>
-          </div>
+        </div>
+        
           <!-- mainmenu end. -->
           <!-- select language start. -->
           <div class="col-md-2 col-sm-2 text-right pr-0">
@@ -132,7 +132,7 @@
                   </p>
                 </div>
                 <a href="cv.pdf" class="comman-btn download-btn" download
-                  >Télécharger mon CV
+                  ><div id="dlcv">Télécharger mon CV</div>
                   <img
                     src="assets/img/brand-icons/hover-icon.png"
                     alt="place img"
@@ -167,7 +167,7 @@
             </ul>
           </div>
           <div class="scroll-down text-right">
-            <a href="#service" class="scroll-down-btn">scrollez
+            <a href="#service" class="scroll-down-btn" ><span id="scrol"> scrollez</span>
               <img
                 src="assets/img/brand-icons/scroll-down-icon.png"
                 alt="place img"
@@ -189,13 +189,13 @@
             <div class="col-md-7">
               <div class="about-right">
                 <h2>À Propos</h2>
-                <p class="language" data-lang="fr">
-                  Salut! Je m'apelle Prochette Dylan J'ai 19 ans et j'étudie à
+                <p id="about_description">
+                  J'ai 19 ans et j'étudie à
                   Paris. Mon univers tourne autour des domaines passionnants de
                   la finance, de la data et de Python. Je suis constamment en
                   quête d'exploration et d'apprentissage dans ces domaines.
                 </p>
-                <p class="language" data-lang="fr">
+                <p class="about_desc">
                   Je souhaite développer toutes mes compétences en informatique.
                   N'hésitez pas à me contacter pour tout conseil, ils sont tous
                   les bienvenus.
@@ -231,7 +231,7 @@
           <div class="row">
             <div class="skill-left">
               <div class="col-md-5 col-md-offset-1">
-                <h2 class="skill-heading">Skills</h2>
+                <h2 class="skill-heading" id="skills_heading">Skills</h2>
                 <div
                   class="skillbar on-scroll clearfix"
                   data-percent="80%"
@@ -302,7 +302,7 @@
             <div class="col-md-12">
               <div class="section-title">
                 <h2 id="expertise_title">Aire d'Expertise</h2>
-                <p id="expertise_txt" data-lang="fr">
+                <p id="expertise_txt" >
                   Maîtrisant différentes techniques de Machine learning et la
                   science des données, j'aspire t à appliquer des solutions et
                   des innovations basées sur les données aux défis du monde
@@ -316,7 +316,7 @@
               <div class="service-teatimonial-item-inner">
                 <span class="ti-light-bulb"></span>
                 <h4 id="expertise_ml">Machine Learning</h4>
-                <p>
+                <p id="expertise_txt">
                   Developpement de models en ML pour différentes applications
                 </p>
               </div>
@@ -324,8 +324,8 @@
             <div class="service-teatimonial-single-item">
               <div class="service-teatimonial-item-inner">
                 <span class="ti-desktop"></span>
-                <h4>Developpement Web</h4>
-                <p>
+                <h4 id="expertise_web_dev">Developpement Web</h4>
+                <p id="web_txt">
                   Compétences web pour compléter mes projets de Machine Learning
                   et créer des applications basées sur le web.
                 </p>
@@ -334,8 +334,8 @@
             <div class="service-teatimonial-single-item">
               <div class="service-teatimonial-item-inner">
                 <span class="ti-server"></span>
-                <h4>Gestion de base de données SQL</h4>
-                <p>
+                <h4 id="expertise_sql">Gestion de base de données SQL</h4>
+                <p id="">
                   Gestion et interrogation de bases de données relationnelles
                   pour la récupération et la manipulation des données.
                 </p>
@@ -344,7 +344,7 @@
             <div class="service-teatimonial-single-item">
               <div class="service-teatimonial-item-inner">
                 <span class="ti-stats-up"></span>
-                <h4 id="skill_data_analysis">Analyse Data</h4>
+                <h4 class="skill_data_analysis">Analyse Data</h4>
                 <p>
                   Analyse statistique , visualisation data, et rapport sous
                   PowerBI.

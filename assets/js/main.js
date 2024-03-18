@@ -257,8 +257,11 @@ function switchLanguage(lang) {
             'menu_blog': 'Blog',
             'menu_contact': 'Contact',
             'about_title': 'About',
-            'about_description': 'Hi! My name is Prochette Dylan. I am 19 years old and studying in Paris. My world revolves around the exciting domains of finance, data, and Python. I am constantly in search of exploration and learning in these fields. I aim to develop all my computer skills. Feel free to contact me for any advice; they are all welcome.',
+            'about_description': 'I am 19 years old and studying in Paris. My world revolves around the exciting domains of finance, data, and Python. I am constantly in search of exploration and learning in these fields.',
+            'about_desc': 'I aim to develop all my computer skills. Feel free to contact me for any advice; they are all welcome.',
             'about_recruit': 'Hire Me',
+            'dlcv':'Download Resume',
+            'scrol':'Scroll !',
             'about_cv': 'Resume',
             'skills_heading': 'Skills',
             'skill_python': "Python Programming",
@@ -269,6 +272,7 @@ function switchLanguage(lang) {
 			'expertise_txt': 'Mastering various Machine Learning techniques and data science, I aspire to apply data-driven solutions and innovations to real-world challenges.',
             'expertise_ml': 'Machine Learning',
             'expertise_web_dev': 'Web Development',
+            'web_txt':'Web skills to complement my Machine Learning projects and create web-based applications',
             'expertise_sql': 'SQL Database Management',
             'expertise_data_analysis': 'Data Analysis',
             'summary_title': 'Resume',
@@ -319,8 +323,11 @@ function switchLanguage(lang) {
             'menu_blog': 'Blog',
             'menu_contact': 'Contacto',
             'about_title': 'Sobre mí',
-            'about_description': '¡Hola! Mi nombre es Prochette Dylan. Tengo 19 años y estudio en París. Mi mundo gira en torno a los emocionantes dominios de las finanzas, los datos y Python. Estoy constantemente en busca de exploración y aprendizaje en estos campos. Mi objetivo es desarrollar todas mis habilidades informáticas. No dudes en contactarme para cualquier consejo; todos son bienvenidos.',
+            'about_description': 'Tengo 19 años y estudio en París. Mi mundo gira en torno a los emocionantes dominios de las finanzas, los datos y Python. Estoy constantemente en busca de exploración y aprendizaje en estos campos.', 
+            'about_desc':'Mi objetivo es desarrollar todas mis habilidades informáticas. No dudes en contactarme para cualquier consejo; todos son bienvenidos.',
             'about_recruit': 'Contrátame',
+            'dlcv': 'Descargar mi currículum',
+            'scrol':'desplácese',
             'about_cv': 'CV',
             'skills_heading': 'Habilidades',
             'skill_python': 'Programación en Python',
@@ -331,6 +338,7 @@ function switchLanguage(lang) {
             'expertise_txt': 'Dominando diversas técnicas de Machine Learning y ciencia de datos, aspiro a aplicar soluciones e innovaciones basadas en datos a los desafíos del mundo real.',
             'expertise_ml': 'Aprendizaje automático',
             'expertise_web_dev': 'Desarrollo web',
+            'web_txt':'Habilidades web para complementar mis proyectos de Aprendizaje Automático y crear aplicaciones basadas en la web',
             'expertise_sql': 'Gestión de bases de datos SQL',
             'expertise_data_analysis': 'Análisis de datos',
             'summary_title': 'Currículum',
@@ -381,18 +389,22 @@ function switchLanguage(lang) {
             'menu_blog': 'Blog',
             'menu_contact': 'Contact',
             'about_title': 'À propos',
-            'about_description': 'Salut ! Je m\'appelle Prochette Dylan. J\'ai 19 ans et j\'étudie à Paris. Mon monde tourne autour des domaines passionnants de la finance, des données et de Python. Je suis constamment à la recherche d\'exploration et d\'apprentissage dans ces domaines. Mon objectif est de développer toutes mes compétences en informatique. N\'hésitez pas à me contacter pour tout conseil ; ils sont tous les bienvenus.',
+            'about_description': 'J\'ai 19 ans et j\'étudie à Paris. Mon monde tourne autour des domaines passionnants de la finance, des données et de Python. Je suis constamment à la recherche d\'exploration et d\'apprentissage dans ces domaines.',
+            'about_desc':'Mon objectif est de développer toutes mes compétences en informatique. N\'hésitez pas à me contacter pour tout conseil ; ils sont tous les bienvenus.',
             'about_recruit': 'Recrutez-moi',
             'about_cv': 'CV',
+            'dlcv':'Télécharger mon cv',
+            'scrol':'Scrollez',
             'skills_heading': 'Compétences',
             'skill_python': 'Programmation Python',
             'skill_web_dev': 'Développement web',
             'skill_sql': 'Gestion de base de données SQL',
             'skill_data_analysis': 'Analyse de données',
             'expertise_title': 'Domaines d\'expertise',
-			'expertise_txt': 'Dominando diversas técnicas de Machine Learning y ciencia de datos, aspiro a aplicar soluciones e innovaciones basadas en datos a los desafíos del mundo real.',
+			'expertise_txt': "Maîtrisant différentes techniques de Machine learning et la science des données, j'aspire t à appliquer des solutions et  des innovations basées sur les données aux défis du monde réel.",
 			'expertise_ml': 'Apprentissage automatique',
             'expertise_web_dev': 'Développement web',
+            'web_txt': 'Compétences web pour compléter mes projets de Machine Learning et créer des applications basées sur le web.',
             'expertise_sql': 'Gestion de base de données SQL',
             'expertise_data_analysis': 'Analyse de données',
             'summary_title': 'CV',
@@ -447,8 +459,11 @@ function switchLanguage(lang) {
     $("#menu_contact").text(langData['menu_contact']);
     $("#about_title").text(langData['about_title']);
     $("#about_description").text(langData['about_description']);
+    $("about_desc").text(langData['about_desc']);
     $("#about_recruit").text(langData['about_recruit']);
     $("#about_cv").text(langData['about_cv']);
+    $("#dlcv").text(langData['dlcv']);
+    $("#scrol").text(langData['scrol']);
     $("#skills_heading").text(langData['skills_heading']);
     $("#skill_python").text(langData['skill_python']);
     $("#skill_web_dev").text(langData['skill_web_dev']);
@@ -457,6 +472,7 @@ function switchLanguage(lang) {
     $("#expertise_title").text(langData['expertise_title']);
 	$("#expertise_txt").text(langData['expertise_txt']);
     $("#expertise_ml").text(langData['expertise_ml']);
+    $("#web_txt").text(langData['web_txt']);   
     $("#expertise_web_dev").text(langData['expertise_web_dev']);
     $("#expertise_sql").text(langData['expertise_sql']);
     $("#expertise_data_analysis").text(langData['expertise_data_analysis']);
