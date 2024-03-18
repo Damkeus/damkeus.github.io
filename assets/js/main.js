@@ -290,6 +290,8 @@ function switchLanguage(lang) {
             'experience_date1': 'September 2023',
             'experience_company1': 'Night ON',
             'experience_position1': 'Software Developer',
+            'summary': 'To Sum Up',
+            'summary_txt':'You can discover detailed information about my skills and experiences in the sections below. Explore further to gain deeper insights.',
             'experience_description1': 'Developing a WebApp using React.js, FastAPI, Python, and MySQL.',
             'experience_date2': 'Soon',
             'experience_company2': 'Soon',
@@ -342,6 +344,7 @@ function switchLanguage(lang) {
             'expertise_sql': 'Gestión de bases de datos SQL',
             'expertise_data_analysis': 'Análisis de datos',
             'summary_title': 'Currículum',
+            'summary_txt':'Puede descubrir información detallada sobre mis habilidades y experiencias en las secciones a continuación. Explore más para obtener perspectivas más profundas.',
             'education_title': 'Educación:',
             'education_date1': 'Marzo de 2023 - Presente',
             'education_institution1': 'Datacamp',
@@ -354,6 +357,7 @@ function switchLanguage(lang) {
             'education_description3': 'Obtuve mi Baccalauréat con especialización en informática y economía con honores.',
             'experience_title': 'Experiencias:',
             'experience_date1': 'Septiembre de 2023',
+            'summary':'resumen',
             'experience_company1': 'Night ON',
             'experience_position1': 'Desarrollador de software',
             'experience_description1': 'Desarrollando una WebApp usando React.js, FastAPI, Python y MySQL.',
@@ -407,6 +411,7 @@ function switchLanguage(lang) {
             'web_txt': 'Compétences web pour compléter mes projets de Machine Learning et créer des applications basées sur le web.',
             'expertise_sql': 'Gestion de base de données SQL',
             'expertise_data_analysis': 'Analyse de données',
+            'summary_txt': 'Vous pouvez découvrir des détails complets sur mes compétences et expériences dans les sections ci-dessous. Explorez davantage pour obtenir des perspectives approfondies.',
             'summary_title': 'CV',
             'education_title': 'Éducation :',
             'education_date1': 'Mars 2023 - Présent',
@@ -421,6 +426,7 @@ function switchLanguage(lang) {
             'experience_title': 'Expériences :',
             'experience_date1': 'Septembre 2023',
             'experience_company1': 'Night ON',
+            'summary':'résumer',
             'experience_position1': 'Développeur logiciel',
             'experience_description1': 'Développement d\'une WebApp en utilisant React.js, FastAPI, Python et MySQL.',
             'experience_date2': 'Bientôt',
@@ -477,6 +483,7 @@ function switchLanguage(lang) {
     $("#expertise_sql").text(langData['expertise_sql']);
     $("#expertise_data_analysis").text(langData['expertise_data_analysis']);
     $("#summary_title").text(langData['summary_title']);
+    $("#summary_txt").text(langData['summary_txt'])
     $("#education_title").text(langData['education_title']);
     $("#education_date1").text(langData['education_date1']);
     $("#education_institution1").text(langData['education_institution1']);
