@@ -266,7 +266,7 @@ function switchLanguage(lang) {
             'skill_sql': 'SQL Database Management',
             'skill_data_analysis': 'Data Analysis',
             'expertise_title': 'Areas of Expertise',
-			'expertise_txt': "Maîtrisant différentes techniques de Machine learning et la science des données, j'aspire t à appliquer des solutions et des innovations basées sur les données aux défis du monde réel. ",
+			'expertise_txt': 'Mastering various Machine Learning techniques and data science, I aspire to apply data-driven solutions and innovations to real-world challenges.',
             'expertise_ml': 'Machine Learning',
             'expertise_web_dev': 'Web Development',
             'expertise_sql': 'SQL Database Management',
@@ -328,7 +328,7 @@ function switchLanguage(lang) {
             'skill_sql': 'Gestión de bases de datos SQL',
             'skill_data_analysis': 'Análisis de datos',
             'expertise_title': 'Áreas de experiencia',
-			'expertise-txt':"Domino diversas técnicas de Machine Learning y ciencia de datos, aspiro a aplicar soluciones e innovaciones basadas en datos a los desafíos del mundo real.",
+            'expertise_txt': 'Dominando diversas técnicas de Machine Learning y ciencia de datos, aspiro a aplicar soluciones e innovaciones basadas en datos a los desafíos del mundo real.',
             'expertise_ml': 'Aprendizaje automático',
             'expertise_web_dev': 'Desarrollo web',
             'expertise_sql': 'Gestión de bases de datos SQL',
@@ -390,8 +390,8 @@ function switchLanguage(lang) {
             'skill_sql': 'Gestion de base de données SQL',
             'skill_data_analysis': 'Analyse de données',
             'expertise_title': 'Domaines d\'expertise',
-			'expertise_txt':"Maîtrisant différentes techniques de Machine learning et la science des données, j'aspire t à appliquer des solutions et des innovations basées sur les données aux défis du monde réel.",
-            'expertise_ml': 'Apprentissage automatique',
+			'expertise_txt': 'Dominando diversas técnicas de Machine Learning y ciencia de datos, aspiro a aplicar soluciones e innovaciones basadas en datos a los desafíos del mundo real.',
+			'expertise_ml': 'Apprentissage automatique',
             'expertise_web_dev': 'Développement web',
             'expertise_sql': 'Gestion de base de données SQL',
             'expertise_data_analysis': 'Analyse de données',
@@ -455,7 +455,7 @@ function switchLanguage(lang) {
     $("#skill_sql").text(langData['skill_sql']);
     $("#skill_data_analysis").text(langData['skill_data_analysis']);
     $("#expertise_title").text(langData['expertise_title']);
-	$("#expertise_txt").html(langData['expertise_txt']);
+	$("#expertise_txt").text(langData['expertise_txt']);
     $("#expertise_ml").text(langData['expertise_ml']);
     $("#expertise_web_dev").text(langData['expertise_web_dev']);
     $("#expertise_sql").text(langData['expertise_sql']);
