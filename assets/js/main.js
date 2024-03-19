@@ -268,9 +268,11 @@ function switchLanguage(lang) {
             'skill_web_dev': 'Web Development',
             'skill_sql': 'SQL Database Management',
             'skill_data_analysis': 'Data Analysis',
+            'skill_txt':'Statistical analysis, data visualization, and reporting using PowerBI',
             'expertise_title': 'Areas of Expertise',
 			'expertise_txt': 'Mastering various Machine Learning techniques and data science, I aspire to apply data-driven solutions and innovations to real-world challenges.',
             'expertise_ml': 'Machine Learning',
+            'ml_txt':'Development of machine learning models for various applications',
             'expertise_web_dev': 'Web Development',
             'web_txt':'Web skills to complement my Machine Learning projects and create web-based applications',
             'expertise_sql': 'SQL Database Management',
@@ -291,6 +293,7 @@ function switchLanguage(lang) {
             'experience_company1': 'Night ON',
             'experience_position1': 'Software Developer',
             'summary': 'To Sum Up',
+            'gestion_sql':'Management and querying of relational databases for data retrieval and manipulation.',
             'summary_txt':'You can discover detailed information about my skills and experiences in the sections below. Explore further to gain deeper insights.',
             'experience_description1': 'Developing a WebApp using React.js, FastAPI, Python, and MySQL.',
             'experience_date2': 'Soon',
@@ -336,12 +339,15 @@ function switchLanguage(lang) {
             'skill_web_dev': 'Desarrollo web',
             'skill_sql': 'Gestión de bases de datos SQL',
             'skill_data_analysis': 'Análisis de datos',
+            'skill_txt':'Análisis estadístico, visualización de datos y generación de informes utilizando PowerBI',
             'expertise_title': 'Áreas de experiencia',
             'expertise_txt': 'Dominando diversas técnicas de Machine Learning y ciencia de datos, aspiro a aplicar soluciones e innovaciones basadas en datos a los desafíos del mundo real.',
             'expertise_ml': 'Aprendizaje automático',
             'expertise_web_dev': 'Desarrollo web',
+            'ml_txt':'Desarrollo de modelos de aprendizaje automático para diversas aplicaciones',
             'web_txt':'Habilidades web para complementar mis proyectos de Aprendizaje Automático y crear aplicaciones basadas en la web',
             'expertise_sql': 'Gestión de bases de datos SQL',
+            'gestion_sql':'Gestión e interrogación de bases de datos relacionales para la recuperación y manipulación de datos',
             'expertise_data_analysis': 'Análisis de datos',
             'summary_title': 'Currículum',
             'summary_txt':'Puede descubrir información detallada sobre mis habilidades y experiencias en las secciones a continuación. Explore más para obtener perspectivas más profundas.',
@@ -405,11 +411,13 @@ function switchLanguage(lang) {
             'skill_sql': 'Gestion de base de données SQL',
             'skill_data_analysis': 'Analyse de données',
             'expertise_title': 'Domaines d\'expertise',
+            'ml_txt':'Developpement de models en ML pour différentes applications',
 			'expertise_txt': "Maîtrisant différentes techniques de Machine learning et la science des données, j'aspire t à appliquer des solutions et  des innovations basées sur les données aux défis du monde réel.",
 			'expertise_ml': 'Apprentissage automatique',
             'expertise_web_dev': 'Développement web',
             'web_txt': 'Compétences web pour compléter mes projets de Machine Learning et créer des applications basées sur le web.',
             'expertise_sql': 'Gestion de base de données SQL',
+            'gestion_sql':'Management and querying of relational databases for data retrieval and manipulation.',
             'expertise_data_analysis': 'Analyse de données',
             'summary_txt': 'Vous pouvez découvrir des détails complets sur mes compétences et expériences dans les sections ci-dessous. Explorez davantage pour obtenir des perspectives approfondies.',
             'summary_title': 'CV',
@@ -424,6 +432,7 @@ function switchLanguage(lang) {
             'education_institution3': 'Lycée Notre Dame de la Compassion',
             'education_description3': 'J\'ai obtenu mon Baccalauréat avec une spécialisation en informatique et économie avec mention.',
             'experience_title': 'Expériences :',
+            'skill_txt':'Analyse statistique , visualisation data, et rapport sousPowerBI',
             'experience_date1': 'Septembre 2023',
             'experience_company1': 'Night ON',
             'summary':'résumer',
@@ -477,9 +486,11 @@ function switchLanguage(lang) {
     $("#skill_data_analysis").text(langData['skill_data_analysis']);
     $("#expertise_title").text(langData['expertise_title']);
 	$("#expertise_txt").text(langData['expertise_txt']);
+    $("#ml_txt").text(langData['ml_txt']);
     $("#expertise_ml").text(langData['expertise_ml']);
     $("#web_txt").text(langData['web_txt']);   
     $("#expertise_web_dev").text(langData['expertise_web_dev']);
+    $("#skill_txt").text(langData['skill_txt']);
     $("#expertise_sql").text(langData['expertise_sql']);
     $("#expertise_data_analysis").text(langData['expertise_data_analysis']);
     $("#summary_title").text(langData['summary_title']);
@@ -492,6 +503,7 @@ function switchLanguage(lang) {
     $("#education_institution2").text(langData['education_institution2']);
     $("#education_description2").text(langData['education_description2']);
     $("#education_date3").text(langData['education_date3']);
+    $("#gestion_sql").text(langData['gestion_sql']);
     $("#education_institution3").text(langData['education_institution3']);
     $("#education_description3").text(langData['education_description3']);
     $("#experience_title").text(langData['experience_title']);
