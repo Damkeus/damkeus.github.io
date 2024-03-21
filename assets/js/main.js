@@ -258,7 +258,7 @@ function switchLanguage(lang) {
             'menu_contact': 'Contact',
             'about_title': 'About',
             'about_description': 'I am 19 years old and studying in Paris. My world revolves around the exciting domains of finance, data, and Python. I am constantly in search of exploration and learning in these fields.',
-            'about_desc': 'I aim to develop all my computer skills. Feel free to contact me for any advice; they are all welcome.',
+            'donatello': 'I aim to develop all my computer skills. Feel free to contact me for any advice; they are all welcome.',
             'about_recruit': 'Hire Me',
             'dlcv':'Download Resume',
             'scrol':'Scroll !',
@@ -329,7 +329,7 @@ function switchLanguage(lang) {
             'menu_contact': 'Contacto',
             'about_title': 'Sobre mí',
             'about_description': 'Tengo 19 años y estudio en París. Mi mundo gira en torno a los emocionantes dominios de las finanzas, los datos y Python. Estoy constantemente en busca de exploración y aprendizaje en estos campos.', 
-            'about_desc':'Mi objetivo es desarrollar todas mis habilidades informáticas. No dudes en contactarme para cualquier consejo; todos son bienvenidos.',
+            'donatello':'Mi objetivo es desarrollar todas mis habilidades informáticas. No dudes en contactarme para cualquier consejo; todos son bienvenidos.',
             'about_recruit': 'Contrátame',
             'dlcv': 'Descargar mi currículum',
             'scrol':'desplácese',
@@ -400,7 +400,7 @@ function switchLanguage(lang) {
             'menu_contact': 'Contact',
             'about_title': 'À propos',
             'about_description': 'J\'ai 19 ans et j\'étudie à Paris. Mon monde tourne autour des domaines passionnants de la finance, des données et de Python. Je suis constamment à la recherche d\'exploration et d\'apprentissage dans ces domaines.',
-            'about_desc':'Mon objectif est de développer toutes mes compétences en informatique. N\'hésitez pas à me contacter pour tout conseil ; ils sont tous les bienvenus.',
+            'donatello':'Mon objectif est de développer toutes mes compétences en informatique. N\'hésitez pas à me contacter pour tout conseil ; ils sont tous les bienvenus.',
             'about_recruit': 'Recrutez-moi',
             'about_cv': 'CV',
             'dlcv':'Télécharger mon cv',
@@ -474,7 +474,7 @@ function switchLanguage(lang) {
     $("#menu_contact").text(langData['menu_contact']);
     $("#about_title").text(langData['about_title']);
     $("#about_description").text(langData['about_description']);
-    $("about_desc").text(langData['about_desc']);
+    $("#donatello").text(langData['donatello']);
     $("#about_recruit").text(langData['about_recruit']);
     $("#about_cv").text(langData['about_cv']);
     $("#dlcv").text(langData['dlcv']);
