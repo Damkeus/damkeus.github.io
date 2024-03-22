@@ -490,7 +490,7 @@ function switchLanguage(lang) {
     $("#expertise_ml").text(langData['expertise_ml']);
     $("#web_txt").text(langData['web_txt']);   
     $("#expertise_web_dev").text(langData['expertise_web_dev']);
-    $("#skill_txt").text(langData['skill_txt']);
+    $("#skill_txt").html(langData['skill_txt']);
     $("#expertise_sql").text(langData['expertise_sql']);
     $("#expertise_data_analysis").text(langData['expertise_data_analysis']);
     $("#summary_title").text(langData['summary_title']);
