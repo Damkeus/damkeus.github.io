@@ -1917,10 +1917,13 @@ h2.skill-heading:before {
     padding: 0 266px;
     margin-bottom: 20px;
 }
-.section-title h2 {
+.section-titre {
     margin-bottom: 18px;
+    color: #ffcc74;
+    font-size: 30px;
+    
 }
-/*================================================ 
+/*=============================================== 
 10. SERVICE AREA
 ================================================ */
 
@@ -3456,8 +3459,8 @@ span.resume-date {
     vertical-align: middle;
     text-align: center;
 }
-.faq-table-cell h1 {
-    font-size: 60px;
+.faq-table-cell p {
+    font-size: 40px;
     font-weight: 300;
     color: #ffcc74;
     margin-bottom: 40px;
@@ -3480,6 +3483,7 @@ span.resume-date {
 .dark .post-meta ul li {
     color: #717896;
 }
+faq
 .dark .post-meta ul li a {
     color: #717896;
 }

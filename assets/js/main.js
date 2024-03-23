@@ -391,7 +391,7 @@ function switchLanguage(lang) {
             'footer_text': 'Dylan Prochette © Portafolio'
         },
         'fr': {
-            'intro': 'Ici <span>Prochette Dylan,</span> Étudiant en informatique, aspirant ingénieur en Machine Learning et développeur web basé en France. Je suis à la recherche d\'opportunités professionnelles à l\'international.',
+            'intro': 'Ici <span>Prochette Dylan,</span> Étudiant en informatique, aspirant ingénieur en Machine Learning et développeur web basé en France. Je suis à la recherche d\'opportunités professionnelles à l\'internationale.',
             'menu_home': 'Accueil',
             'menu_about': 'À propos',
             'menu_services': 'Services',
@@ -411,7 +411,7 @@ function switchLanguage(lang) {
             'skill_sql': 'Gestion de base de données SQL',
             'skill_data_analysis': 'Analyse de données',
             'expertise_title': 'Domaines d\'expertise',
-            'ml_txt':'Developpement de models en ML pour différentes applications',
+            'ml_txt':'Développement de modèles en ML pour différentes applications',
 			'expertise_txt': "Maîtrisant différentes techniques de Machine learning et la science des données, j'aspire t à appliquer des solutions et  des innovations basées sur les données aux défis du monde réel.",
 			'expertise_ml': 'Apprentissage automatique',
             'expertise_web_dev': 'Développement web',
