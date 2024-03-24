@@ -293,6 +293,7 @@ function switchLanguage(lang) {
             'experience_company1': 'Night ON',
             'experience_position1': 'Software Developer',
             'summary': 'To Sum Up',
+            'analyse_data':'Analisis de Datos',
             'gestion_sql':'Management and querying of relational databases for data retrieval and manipulation.',
             'summary_txt':'You can discover detailed information about my skills and experiences in the sections below. Explore further to gain deeper insights.',
             'experience_description1': 'Developing a WebApp using React.js, FastAPI, Python, and MySQL.',
@@ -364,6 +365,7 @@ function switchLanguage(lang) {
             'experience_title': 'Experiencias:',
             'experience_date1': 'Septiembre de 2023',
             'summary':'resumen',
+            'analyse_data':'Analysis de datos',
             'experience_company1': 'Night ON',
             'experience_position1': 'Desarrollador de software',
             'experience_description1': 'Desarrollando una WebApp usando React.js, FastAPI, Python y MySQL.',
@@ -429,6 +431,7 @@ function switchLanguage(lang) {
             'education_institution2': 'Licence',
             'education_description2': 'Je suis actuellement en Licence Tech&Business à Paris. Nous apprenons tous les aspects concrets et théoriques de la visualisation et de l\'exploration du monde des données.',
             'education_date3': '2019-2021',
+            'analyse_data': 'Analyse Data',
             'education_institution3': 'Lycée Notre Dame de la Compassion',
             'education_description3': 'J\'ai obtenu mon Baccalauréat avec une spécialisation en informatique et économie avec mention.',
             'experience_title': 'Expériences :',
@@ -504,6 +507,7 @@ function switchLanguage(lang) {
     $("#education_description2").text(langData['education_description2']);
     $("#education_date3").text(langData['education_date3']);
     $("#gestion_sql").text(langData['gestion_sql']);
+    $("#analyse_data").text(langData['analyse_data']);
     $("#education_institution3").text(langData['education_institution3']);
     $("#education_description3").text(langData['education_description3']);
     $("#experience_title").text(langData['experience_title']);
