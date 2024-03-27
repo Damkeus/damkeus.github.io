@@ -3465,6 +3465,9 @@ span.resume-date {
     color: #ffcc74;
     margin-bottom: 40px;
 }
+.faq-description{
+    font-size: 40px;
+}
 .homepage-2 .faq-table-cell h1 {
     color: #3e4455;
 }
