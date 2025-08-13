@@ -123,7 +123,31 @@
               <div class="slider-contents">
                 <div class="slider-text">
                   <span class="intro">Hi</span>
-                  <h1><span>Dylan Prochette</span></h1>
+                  <h1><span>Dylan Prochette</span></h1> 
+                  <!-- Anime.js -->
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+
+<!-- Ton animation -->
+<script>
+  const nameEl = document.querySelector('.name');
+  const words = nameEl.textContent.trim().split(' ');
+
+  // On remplace le contenu par des <span>
+  nameEl.innerHTML = words.map((word, i) =>
+    `<span class="word" style="display:inline-block; opacity:0;" data-word="${i}">${word}</span>`
+  ).join(' ');
+
+  // Anime chaque mot
+  anime({
+    targets: '.word',
+    translateY: ['1em', '0em'],
+    opacity: [0, 1],
+    easing: 'easeOutExpo',
+    delay: anime.stagger(200) // décalage entre chaque mot
+  });
+</script>
+
+                  
                   <p class="language" data-lang="fr">
                     Ici <span>Prochette Dylan,</span> Étudiant en informatique,
                     aspirant ingénieur en Machine Learning et développeur web
@@ -714,6 +738,8 @@
     <script src="assets/js/venobox.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
+    
+
     <!-- end all js files. -->
   </body>
 </html>
